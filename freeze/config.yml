@@ -1,0 +1,54 @@
+#####################################
+#            iFreeze by:            # 
+#              Kurtexz              #
+#####################################
+# {prefix} - Shows prefix           #
+# {staff} - Shows staff who froze   #
+# {frozen} - Shows who was frozen   #
+# {time} - Show remaining time left # 
+#####################################
+
+# Permission to /freeze: mcwarside.freeze.use
+
+# You know what this is, use {prefix} to use it in messages ;) 
+prefix: '&e&lYour prefix &8>'
+
+# Kinda obvious.
+noperms: '&c&lYou do not have permission to use this command!'
+
+# How many seconds a player should have to get on teamspeak/discord.
+Time: 300
+
+# Cooldown Section.
+Cooldown:
+  Message: '{prefix} &eYou must wait &c{time} &emore seconds to use &c/freeze &eagain!'
+  FreezeAgain: '{prefix} &eYou may now use &c/freeze &eagain!'
+  Time: 5 
+
+# Frozen messages. Staff must have the permission: mcwarside.freeze.alert to see the broadcasts.
+Frozen:
+  Message:
+    Staff: '{prefix} &eYou have frozen: &c{frozen}'
+    Player: '{prefix} &eYou have been frozen by: &4{staff}'
+    Broadcast: '{prefix} &b{staff} &7has frozen &c{frozen}&7!'
+ 
+Title:
+  Message: '&7You have &c{time} &7more seconds to make your way to &cts.mcwarside.com&7!'
+
+# Unfrozen messages. Staff must have the permission: mcwarside.freeze.alert to see the broadcasts.
+Unfrozen:
+  Message:
+    Staff: '{prefix} &eYou have unfrozen: &c{frozen}&e!'
+    Player: '{prefix} &eYou have been unfrozen by: &c{staff}'
+    Broadcast: '{prefix} &b{staff} &7has unfrozen: &c{frozen}'
+
+Timeup:
+  Staff:
+  - '&8&m-------------------------------------------------'
+  - '&4&l{frozen} &7has had &c{time} &7seconds to get on teamspeak/discord.'
+  - '&7If they have not showed up please ban them for Faliing to Screenshare!'
+  - '&8&m-------------------------------------------------'  
+  Player: '{prefix} &7Your time is up! If you are not on teamspeak/discord then you will be banned!'
+
+Logout:
+  Message: '{prefix} &4&l{frozen} &7has &clogged out &7whilst frozen!'

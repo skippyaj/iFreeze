@@ -1,0 +1,6 @@
+name: iFreeze
+author: Kristometh
+version: 1.0
+main: me.kris.freeze.main
+commands:
+  freeze:
